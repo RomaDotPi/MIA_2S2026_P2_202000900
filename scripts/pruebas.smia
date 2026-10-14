@@ -1,0 +1,21 @@
+# PRUEBA INTEGRAL EXTREAMFS
+mkdisk -size=10 -unit=M -fit=FF -path=/tmp/mia/disco1.mia
+fdisk -size=7 -unit=M -type=P -fit=WF -path=/tmp/mia/disco1.mia -name=Part1
+mount -path=/tmp/mia/disco1.mia -name=Part1
+mounted
+# Para carnet 202000900 el primer ID será 001A
+mkfs -type=full -id=001A
+login -user=root -pass=123 -id=001A
+mkgrp -name=usuarios
+mkusr -user=user1 -pass=abc123 -grp=usuarios
+cat -file1=/users.txt
+mkdir -p -path=/home/user/docs
+mkfile -size=128 -path=/home/user/docs/a.txt -r
+cat -file1=/home/user/docs/a.txt
+rep -id=001A -path=/tmp/mia/reports/mbr.png -name=mbr
+rep -id=001A -path=/tmp/mia/reports/disk.png -name=disk
+rep -id=001A -path=/tmp/mia/reports/tree.png -name=tree
+rep -id=001A -path=/tmp/mia/reports/sb.png -name=sb
+rep -id=001A -path=/tmp/mia/reports/bm_inode.txt -name=bm_inode
+rep -id=001A -path=/tmp/mia/reports/users.txt -name=file -path_file_ls=/users.txt
+logout

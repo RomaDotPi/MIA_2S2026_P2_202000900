@@ -1,0 +1,19 @@
+.notice > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notice .danger {
+  padding: 7px 10px;
+  border: 1px solid #9a9a9a;
+  border-radius: 1px;
+  background: #d7d7d7;
+  color: #111111;
+  font-size: 12px;
+}
+
+.notice .danger:hover:not(:disabled) {
+  border-color: #ffffff;
+  background: #ffffff;
+}
